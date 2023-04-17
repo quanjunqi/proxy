@@ -7,9 +7,9 @@ go的执行文件已经编译好
 
 2. 安装 supervior 和 git
   
-  apt update
+    apt update
   
-  apt instll supervior git
+    apt instll supervior git
  
 3.  git clone https://github.com/quanjunqi/proxy.git  拉取代码
 
@@ -20,19 +20,12 @@ go的执行文件已经编译好
 index.conf:
 
    [program:go-shadowsocks2] ; 进程名字
-   
    command=./root/go-shadowsocks2 -s ss://aes-128-gcm:xxxx@0.0.0.0:3389 -verbose  ;代理启动命令 xxxx为密码
-   
-   user=root ; 启动进程的用户
-   
+   user=root ; 启动进程的用户 
    autostart=true                ; 随着supervisord的启动而启动
-   
    autorestart=true              ; 自动重启
-   
-   startsecs=4                   ; 启动10秒后没有异常退出，就表示进程正常启动了，默认为1秒
-   
+   startsecs=4                   ; 启动10秒后没有异常退出，就表示进程正常启动了，默认为1 
    stderr_logfile=/var/log/go-shadowsocks2.err.log.  ;错误日志
-   
    stdout_logfile=/var/log/go-shadowsocks2.out.log。 ;info 日志
 
 
