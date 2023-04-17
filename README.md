@@ -6,6 +6,7 @@ go的执行文件已经编译好
 1. 购买云服务器  Ubuntu系统 1CPU 2G内存就好，带宽按使用流量付费，带宽上限拉满
 
 2. 安装 supervior 和 git
+  
   apt update
   
   apt instll supervior git
