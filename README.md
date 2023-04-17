@@ -5,11 +5,11 @@ go的执行文件已经编译好
 
 1. 购买云服务器  Ubuntu系统 1CPU 2G内存，带宽按使用流量付费，带宽上限拉满
 
-2. 安装 supervior 和 git
+2. 安装 supervisor 和 git
 
           apt update
 
-          apt install supervior git
+          apt install supervisor git
  
 3. 拉取代码
 
@@ -39,7 +39,7 @@ index.conf:
    
     stdout_logfile=/var/log/go-shadowsocks2.out.log。 ;info 日志
 
-5. 把index.conf 拷贝到supervior的配置目录下
+5. 把index.conf 拷贝到supervisor的配置目录下
 
        启动supervior
 
