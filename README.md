@@ -41,21 +41,21 @@ index.conf:
 
 5. 把index.conf 拷贝到supervior的配置目录下
 
-  启动supervior
-  
-  supervisord -c /etc/supervisor/supervisord.conf   或  supervisord 
+       启动supervior
 
-  重新加载配置文件
-  
-  supervisorctl reload
-  
-  查看进程状态
-  
-  supervisorctl status
-  
-    test                          STOPPED   Mar 13 09:31 AM
-    
-    go-shadowsocks2               RUNNING   pid 4933, uptime 35 days, 5:49:04
+       supervisord -c /etc/supervisor/supervisord.conf   或  supervisord 
+
+       重新加载配置文件
+
+       supervisorctl reload
+
+       查看进程状态
+
+       supervisorctl status
+
+         test                          STOPPED   Mar 13 09:31 AM
+
+         go-shadowsocks2               RUNNING   pid 4933, uptime 35 days, 5:49:04
   
 6. 修改云主机安全组开放3389端口
 
