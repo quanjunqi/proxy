@@ -11,7 +11,9 @@ go的执行文件已经编译好
 
      apt instll supervior git
  
-3.  git clone https://github.com/quanjunqi/proxy.git  拉取代码
+3. 拉取代码
+
+     git clone https://github.com/quanjunqi/proxy.git  
 
 4. 添加supervior进程配置文件index.conf，index.conf只是随便取的，具体命名规则看supervisord.conf的 [include] 规则。
 
