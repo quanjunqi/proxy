@@ -9,7 +9,7 @@ go的执行文件已经编译好
 
           apt update
 
-          apt instll supervior git
+          apt install supervior git
  
 3. 拉取代码
 
