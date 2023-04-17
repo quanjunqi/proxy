@@ -18,28 +18,40 @@ go的执行文件已经编译好
     files = /etc/supervisor/conf.d/*.conf
 
 index.conf:
+
    [program:go-shadowsocks2] ; 进程名字
+   
    command=./root/go-shadowsocks2 -s ss://aes-128-gcm:xxxx@0.0.0.0:3389 -verbose  ;代理启动命令 xxxx为密码
+   
    user=root ; 启动进程的用户
+   
    autostart=true                ; 随着supervisord的启动而启动
+   
    autorestart=true              ; 自动重启
+   
    startsecs=4                   ; 启动10秒后没有异常退出，就表示进程正常启动了，默认为1秒
+   
    stderr_logfile=/var/log/go-shadowsocks2.err.log.  ;错误日志
+   
    stdout_logfile=/var/log/go-shadowsocks2.out.log。 ;info 日志
 
 
 5. 把index.conf 拷贝到supervior的配置目录下
 
   启动supervior
+  
   supervisord -c /etc/supervisor/supervisord.conf   或  supervisord 
 
   重新加载配置文件
+  
   supervisorctl reload
   
   查看进程状态
+  
   supervisorctl status
   
     test                          STOPPED   Mar 13 09:31 AM
+    
     go-shadowsocks2               RUNNING   pid 4933, uptime 35 days, 5:49:04
   
 6. 修改云主机安全组开放3389端口
