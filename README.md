@@ -3,23 +3,23 @@ linux 代理软件
 
 go的执行文件已经编译好
 
-1. 购买云服务器  Ubuntu系统 1CPU 2G内存就好，带宽按使用流量付费，带宽上限拉满
+1. 购买云服务器  Ubuntu系统 1CPU 2G内存，带宽按使用流量付费，带宽上限拉满
 
 2. 安装 supervior 和 git
 
-     apt update
+          apt update
 
-     apt instll supervior git
+          apt instll supervior git
  
 3. 拉取代码
 
-     git clone https://github.com/quanjunqi/proxy.git  
+          git clone https://github.com/quanjunqi/proxy.git  
 
 4. 添加supervior进程配置文件index.conf，index.conf只是随便取的，具体命名规则看supervisord.conf的 [include] 规则。
 
-    [include]
-    
-    files = /etc/supervisor/conf.d/*.conf
+         [include]
+
+         files = /etc/supervisor/conf.d/*.conf
 
 index.conf:
 
