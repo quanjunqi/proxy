@@ -3,8 +3,9 @@ linux 代理软件
 
 go的执行文件已经编译好
 
-1. 购买云服务器  Ubuntu系统 1CPU 2G内存，带宽按使用流量付费，带宽上限拉满
-
+1. 购买云服务器  Ubuntu系统5.0版本上（4.0的版本会报错 GLIBC_2.34 not found），可以根据这个教程修复 https://t.cn/A6NI72OS
+   配置购买 1CPU 2G内存，带宽按使用流量付费，带宽上限拉满 
+                              
 2. 安装 supervisor 和 git
 
           apt update
@@ -40,6 +41,7 @@ index.conf:
     stdout_logfile=/var/log/go-shadowsocks2.out.log。 ;info 日志
 
 5. 把index.conf 拷贝到supervisor的配置目录下
+      cp  index.conf /etc/supervisor/conf.d
 
        启动supervior
 
